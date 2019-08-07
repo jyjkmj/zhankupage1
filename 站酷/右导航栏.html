@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="font_1322342_tskfofy7o2/iconfont.css">
+	<!-- <link red="stylesheet" href="css/aside.css"> -->
+	<style>
+		{
+			margin: 0;
+			padding: 0;
+			/* background-color: red; */
+		}
+		aside{
+			position: fixed;
+			right: 30px;
+			bottom: 80px;
+			/* overflow: hidden; */
+		}
+		aside>ul{
+			list-style: none
+		}
+		aside>ul>li{
+			cursor: pointer;
+			border-radius: 50%;
+			margin-top: 10px;
+			position: relative;
+			display: block;
+			/* border: 1px solid #000; */
+		}
+		aside li>img{
+			width:48px;
+			height: 48px;
+			cursor: pointer;
+		}
+		.my{
+			display: inline-block;
+    		width: 48px;
+			height: 48px;
+			font-size: 20px;
+			background-color: #fff;
+			text-align: center;
+			line-height: 48px;
+			border-radius: 50%;
+			/* color: yellow; */
+		}
+		aside>ul>li:nth-of-type(2)>div{
+			background-color:rgba(0,0,0,0.6);
+			margin: 0px 16px 0px 0px;
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			width: 88px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			top: 0px;
+			right: 48px;
+			white-space: nowrap;
+			display: none;
+		}
+		aside>ul>li:nth-of-type(2)>div>div{
+			position: relative;
+			transform: translate(50%);
+			left: 50%;
+			top: -30px;
+	 		border-width: 10px;
+			border-style: solid;
+			border-color: transparent transparent transparent rgba(0,0,0,0.6);
+		}
+		aside>ul>li:nth-of-type(3)>div{
+			background-color: #fff;
+			font-size: 14px;
+			position: absolute;
+			width: 150px;
+			text-align: center;
+			line-height: 40px;
+			top: -60px;
+			right: 48px;
+			display: none;
+		}
+		aside>ul>li:nth-of-type(3)>div>ul{
+			list-style: none;
+		}
+		aside>ul>li:nth-of-type(4)>div{
+			background-color:rgba(0,0,0,0.6);
+			color: white;
+			margin: 0px 16px 0px 0px;
+			font-size: 14px;
+			position: absolute;
+			width: 88px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			top: 0px;
+			right: 48px;
+			white-space: nowrap;
+			display: none;
+		}
+		aside>ul>li:nth-of-type(4)>div>div{
+			position: relative;
+			transform: translate(50%);
+			left: 50%;
+			top: -30px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: transparent transparent transparent rgba(0,0,0,0.6);
+		}
+		aside>ul>li:nth-of-type(5)>div{
+			background-color:rgba(0,0,0,0.6);
+			color: white;
+			margin: 0px 16px 0px 0px;
+			font-size: 14px;
+			position: absolute;
+			width: 88px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			top: 0px;
+			right: 48px;
+			white-space: nowrap;
+			display: none;
+		}
+		aside>ul>li:nth-of-type(5)>div>div{
+			position: relative;
+			transform: translate(50%);
+			left: 50%;
+			top: -30px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: transparent transparent transparent rgba(0,0,0,0.6);
+		}
+		.colo{
+			color: red;
+		}
+		
+	</style>
+</head>
+<body >
+	<aside>
+		<ul>
+			<li>
+				<img src="img/xrlb-icon.png" alt="">
+			</li>
+			<li>
+				<span class="iconfont icon-huaban- my"></span>
+				<div>
+					在线客服
+					<div></div>
+				</div>
+			</li>
+			<li>
+				<span class="iconfont icon-gouwuche- my"></span>
+				<div>
+					<ul>
+						<li>图片清单</li>
+						<li>视频清单</li>
+						<li>字体清单</li>
+						<li>音乐清单</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<span class="iconfont icon-02 my"></span>
+				<div>
+					收藏夹
+					<div></div>
+				</div>
+			</li>
+			<li>
+				<span class="iconfont icon-huidaodingbu my"></span>
+				<div>
+					回到顶部
+				<div></div>
+				</div>
+			</li>
+		</ul>
+	</aside>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	$(function(){
+		$('aside').children().children().eq(4).click(function(event){
+			$('.body,html').animate({
+				'scrollTop':'0px'
+			},500)
+		})
+
+		$('aside').children().children().eq(1).mouseenter(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'block'
+				});	
+				$(this).css({
+					'box-shadow':'3px 3px 10px -2px rgba(0,0,0,0.6)'
+				})
+		});
+		$('aside').children().children().eq(1).mouseleave(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'none'
+				});	
+				$(this).css({
+					'box-shadow':'none'
+				})
+		});
+
+		$('aside').children().children().eq(2).mouseenter(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'block'
+				});
+					$(this).css({
+					'box-shadow':'3px 3px 10px -2px rgba(0,0,0,0.6)'
+				})
+		});
+		$('aside').children().children().eq(2).mouseleave(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'none'
+				});
+				$(this).css({
+					'box-shadow':'none'
+				})
+		});
+
+		$('aside').children().children().eq(2).children().eq(1).children().children().mouseenter(function(event) {
+				$(this).addClass('colo');
+				$(this).siblings('li').removeClass('colo');
+		});
+		$('aside').children().children().eq(2).children().eq(1).children().children().mouseleave(function(event) {
+				$(this).removeClass('colo');
+		});
+
+		$('aside').children().children().eq(3).mouseenter(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'block'
+				});	
+				$(this).css({
+					'box-shadow':'3px 3px 10px -2px rgba(0,0,0,0.6)'
+				})
+		});
+		$('aside').children().children().eq(3).mouseleave(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'none'
+				});	
+				$(this).css({
+					'box-shadow':'none'
+				})
+		});
+
+		$('aside').children().children().eq(4).mouseenter(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'block'
+				});	
+				$(this).css({
+					'box-shadow':'3px 3px 10px -2px rgba(0,0,0,0.6)'
+				})
+		});
+		$('aside').children().children().eq(4).mouseleave(function(event) {
+				$(this).children().eq(1).css({
+					'display': 'none'
+				});	
+				$(this).css({
+					'box-shadow':'none'
+				})
+		});
+	})
+</script>
+</body>
+</html>
